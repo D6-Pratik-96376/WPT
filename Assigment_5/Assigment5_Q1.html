@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Enter Employee Name</h2>
+    
+    <input  type="text" id="userinp" placeholder="Enter name of Employee">
+    <button onclick="addEmp()">Add Name</button>
+    <button onclick="sortemp() ">sort & Display</button>
+   
+    <br>
+
+    <h2 >Sorted Employee Names</h2>
+
+    <ul id = "sortedemp"></ul>
+
+    <script>
+       
+        let empArray = []
+
+       
+        function addEmp(){
+
+            let empname = document.getElementById("userinp").value.trim()
+
+            if(empname === ""){
+                return window.alert("Please enter name")
+            }
+            if(empArray.length >= 6){
+                return window.alert("Your already entered 6 employees")
+            }
+            empArray.push(empname)
+            document.getElementById("userinp").value = "";
+           console.log(empArray)
+
+            
+        }
+
+        function sortemp(){
+            empArray.sort();
+            const ul = document.getElementById("sortedemp")
+           for(let i=0;i<empArray.length;i++){
+
+             ul.innerHTML += `<li> ${empArray[i]} </li>`
+            
+           }
+        }
+
+
+    
+
+       
+
+       
+    </script>
+
+
+    
+</body>
+</html>

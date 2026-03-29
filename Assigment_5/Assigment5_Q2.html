@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+
+       
+    <div class="container">
+             <h2><u>Calculator</u></h2>
+        <table class="table table-success table-striped">
+
+            <tbody>
+                <tr>
+                    <td><label>Enter Number 1</label></td>
+                    <td> <input type="number"></td>
+                </tr>
+                    
+                <tr>
+                    <td><label>Enter Number 2</label></td>
+                    <td> <input type="number"></td>
+                </tr>
+
+                <tr>
+                    <td><label>Result</label></td>
+                    <td id="result"> <input type="number"></td>
+                </tr>
+
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2"><button class="btn btn-primary" onclick="addition()">Addition</button>  <button class="btn btn-success" onclick="Subtraction()">Subtraction</button>  <button class="btn btn-secondary" onclick="Multiply()">Multiply</button>   <button class="btn btn-warning" onclick="Division()">Division</button></td>
+                </tr>
+            </tfoot>
+♦
+       
+    </div>
+    <script>
+
+        function addition(){
+            const arr = document.getElementsByTagName("input")
+            const number1 = parseInt(arr[0].value)
+            const number2 = parseInt(arr[1].value)
+            const result = document.getElementById("result")
+
+            result.innerText = number1 + number2 
+            document.getElementsByTagName("input").value = ""
+            
+
+        }
+
+           function Subtraction(){
+            const arr = document.getElementsByTagName("input")
+            const number1 = parseInt(arr[0].value)
+            const number2 = parseInt(arr[1].value)
+            const result = document.getElementById("result")
+
+            result.innerText = number1 - number2 
+    number1=""
+    number2=""
+        }
+
+           function Multiply(){
+            const arr = document.getElementsByTagName("input")
+            const number1 = parseInt(arr[0].value)
+            const number2 = parseInt(arr[1].value)
+            const result = document.getElementById("result")
+
+            result.innerText = number1*number2 
+            number1=""
+            number2=""
+        }
+
+
+           function Division(){
+            const arr = document.getElementsByTagName("input")
+            const number1 = parseInt(arr[0].value)
+            const number2 = parseInt(arr[1].value)
+            const result = document.getElementById("result")
+
+            result.innerText = number1/number2 
+            number1=""
+            number2=""
+        }
+
+    </script>
+</body>
+</html>
