@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = window.prompt("Enter a Number (n):")
+        let array = []
+
+        if(n>0){
+
+            for(let i=1;i<=n;i++){
+                if(i%2 == 0){
+                    array.push(i)
+                }
+                
+            }
+            
+           console.log("Even Numbers <= " + n + ":" + array)
+           window.alert("Chech the console for the list of even Numbers!!")
+        }
+        else{
+            window.alert("Please enter a valid positive integer")
+        }
+    </script>
+</body>
+</html>

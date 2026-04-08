@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function check(){
+            return window.alert("please enter a valid postive integer")
+        }
+
+        function output(n){
+            return window.alert("Larger Number is: " + n)
+        }
+        
+        let a = window.prompt("Enter the first number: ")
+        if(a<0){
+            check()
+        }else{
+            let b = window.prompt("Enter the Second number: ")
+            if(b<0){
+                check()
+            }
+            else{
+                let c = window.prompt("Enter the Third number: ")
+                if(c<0){
+                    check()
+                }
+            }
+            
+        }
+        if(a>b && a>c){
+           output(a)
+        }
+        else if(b>a && b>c){
+           output(b)
+        }
+        else{
+            output(c)
+        }
+       
+
+    </script>
+</body>
+</html>
